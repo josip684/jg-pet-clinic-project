@@ -1,9 +1,10 @@
-package com.example.jgpetclinicproject;
+package jgpetclinicproject;
 
+import com.example.jgpetclinicproject.JgPetClinicProjectApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest(classes = JgPetClinicProjectApplication.class)
 class JgPetClinicProjectApplicationTests {
 
     @Test
