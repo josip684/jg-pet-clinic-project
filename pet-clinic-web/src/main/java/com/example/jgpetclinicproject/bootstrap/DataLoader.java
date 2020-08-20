@@ -1,10 +1,7 @@
 package com.example.jgpetclinicproject.bootstrap;
 
 import com.example.jgpetclinicproject.model.*;
-import com.example.jgpetclinicproject.services.OwnerService;
-import com.example.jgpetclinicproject.services.PetTypeService;
-import com.example.jgpetclinicproject.services.SpecialtyService;
-import com.example.jgpetclinicproject.services.VetService;
+import com.example.jgpetclinicproject.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,13 +14,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtiesService;
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-                      SpecialtyService specialtiesService) {
+                      SpecialtyService specialtiesService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtiesService = specialtiesService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -82,11 +81,19 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner2);
 
         Pet fionasCat = new Pet();
+        fionasCat.setId(2L);//bug with auto added IDs, v_no: 157
         fionasCat.setPetType(savedCatPetType);
         fionasCat.setOwner(owner2);
         fionasCat.setBirthDate(LocalDate.now());
         fionasCat.setName("Catica");
         owner2.getPets().add(fionasCat);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+
+        visitService.save(catVisit);
 
         System.out.println("Loaded Owners ...");
 
