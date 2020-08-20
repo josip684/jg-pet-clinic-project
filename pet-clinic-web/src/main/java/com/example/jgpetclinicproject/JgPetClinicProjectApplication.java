@@ -1,12 +1,12 @@
 package com.example.jgpetclinicproject;
 
-import com.example.jgpetclinicproject.services.map.OwnerServiceMap;
+import com.example.jgpetclinicproject.services.map.OwnerMapService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 //@EnableJpaRepositories(basePackageClasses = {OwnerSDJpaService.class})
-@EnableJpaRepositories(basePackageClasses = {OwnerServiceMap.class})
+@EnableJpaRepositories(basePackageClasses = {OwnerMapService.class})
 @SpringBootApplication
 public class JgPetClinicProjectApplication {
 
