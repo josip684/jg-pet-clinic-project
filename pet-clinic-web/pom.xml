@@ -34,12 +34,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -96,13 +90,6 @@
             <version>5.4.0</version>
             <scope>test</scope>
         </dependency>
-        <!--dodano naknadno???-->
-        <!--<dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-junit-jupiter</artifactId>
-            <version>2.22.0</version>
-            <scope>test</scope>
-        </dependency>-->
     </dependencies>
     <build>
         <plugins>
@@ -135,28 +122,10 @@
                         <groupId>org.mockito</groupId>
                         <artifactId>mockito-core</artifactId>
                         <version>${mockito.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.junit.platform</groupId>
-                        <artifactId>junit-platform-surefire-provider</artifactId>
-                        <version>1.0.3</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.junit.jupiter</groupId>
-                        <artifactId>junit-jupiter-engine</artifactId>
-                        <version>5.0.3</version>
+                       <!-- <version>2.23.0</version>-->
                     </dependency>
                 </dependencies>
             </plugin>
         </plugins>
     </build>
-
-
 </project>
