@@ -96,6 +96,13 @@
             <version>5.4.0</version>
             <scope>test</scope>
         </dependency>
+        <!--dodano naknadno???-->
+        <!--<dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>2.22.0</version>
+            <scope>test</scope>
+        </dependency>-->
     </dependencies>
     <build>
         <plugins>
