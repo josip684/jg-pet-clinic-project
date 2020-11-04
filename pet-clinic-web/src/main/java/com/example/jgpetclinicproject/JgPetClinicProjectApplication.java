@@ -13,6 +13,7 @@ public class JgPetClinicProjectApplication {
     public static void main(String[] args) {
         SpringApplication.run(JgPetClinicProjectApplication.class, args);
         System.out.println("-------------##################################-------------");
+        System.out.println("-------------___________________________________------------");
     }
 
 }
